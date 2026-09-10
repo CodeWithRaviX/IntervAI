@@ -1,0 +1,37 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Maven / Java Build
+target/
+*.class
+*.log
+.mvn/wrapper/maven-wrapper.jar
+
+# Node / Frontend Build
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment & Secrets (NEVER COMMIT SECRETS)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+application-prod.properties
+application-local.properties
+*local.properties
+*.pem
+*.key

@@ -1,0 +1,6 @@
+import axiosClient from './axiosClient';
+
+export const dashboardApi = {
+  getSummary: () => axiosClient.get('/dashboard/summary'),
+  getPerformance: () => axiosClient.get('/dashboard/performance'),
+};
