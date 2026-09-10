@@ -1,8 +1,6 @@
 package com.aimock.interview.config;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -18,16 +16,6 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Value("${app.cors.allowed-origins:http://localhost:5173,http://localhost:3000}")
     private String[] allowedOrigins;
-
-    @Bean
-    public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> webServerFactoryCustomizer() {
-        return factory -> {
-            String cp = factory.getContextPath();
-            if (cp != null && (cp.equals("/") || cp.trim().isEmpty())) {
-                factory.setContextPath("");
-            }
-        };
-    }
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
