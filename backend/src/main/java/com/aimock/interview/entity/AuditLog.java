@@ -36,8 +36,7 @@ public class AuditLog {
     @Column(name = "resource_id", length = 255)
     private String resourceId;
 
-    @Lob
-    @Column(columnDefinition = "NVARCHAR(MAX)")
+    @Column(columnDefinition = "TEXT")
     private String details;
 
     @Column(name = "ip_address", length = 100)

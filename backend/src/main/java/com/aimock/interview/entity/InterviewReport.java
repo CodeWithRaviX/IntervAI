@@ -42,24 +42,19 @@ public class InterviewReport {
     @Column(name = "average_answer_score", nullable = false, precision = 5, scale = 2)
     private BigDecimal averageAnswerScore;
 
-    @Lob
-    @Column(name = "strengths_json", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "strengths_json", columnDefinition = "TEXT")
     private String strengthsJson;
 
-    @Lob
-    @Column(name = "weaknesses_json", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "weaknesses_json", columnDefinition = "TEXT")
     private String weaknessesJson;
 
-    @Lob
-    @Column(name = "recommended_topics_json", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "recommended_topics_json", columnDefinition = "TEXT")
     private String recommendedTopicsJson;
 
-    @Lob
-    @Column(name = "improvement_suggestions_json", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "improvement_suggestions_json", columnDefinition = "TEXT")
     private String improvementSuggestionsJson;
 
-    @Lob
-    @Column(nullable = false, columnDefinition = "NVARCHAR(MAX)")
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String summary;
 
     @CreationTimestamp

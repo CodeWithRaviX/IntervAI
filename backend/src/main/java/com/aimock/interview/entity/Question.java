@@ -31,8 +31,7 @@ public class Question {
     @Column(name = "sequence_number", nullable = false)
     private Integer sequenceNumber;
 
-    @Lob
-    @Column(name = "question_text", nullable = false, columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "question_text", nullable = false, columnDefinition = "TEXT")
     private String questionText;
 
     @Column(name = "question_type", nullable = false, length = 50)

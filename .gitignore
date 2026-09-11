@@ -24,14 +24,17 @@ dist/
 dist-ssr/
 *.local
 
-# Environment & Secrets (NEVER COMMIT SECRETS)
+# Environment & Secrets (NEVER COMMIT SENSITIVE SECRETS)
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-application-prod.properties
-application-local.properties
+.env.*
+!.env.example
+*.local
 *local.properties
+application-local.properties
+application-prod.properties
+**/application-local.properties
+**/application-prod.properties
 *.pem
 *.key
+*.crt
+credentials.json

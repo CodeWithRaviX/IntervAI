@@ -26,8 +26,7 @@ public class Answer {
     @JoinColumn(name = "question_id", nullable = false, unique = true)
     private Question question;
 
-    @Lob
-    @Column(name = "answer_text", nullable = false, columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "answer_text", nullable = false, columnDefinition = "TEXT")
     private String answerText;
 
     @Column(name = "technical_score", nullable = false)
@@ -45,16 +44,13 @@ public class Answer {
     @Column(name = "overall_score", nullable = false)
     private Integer overallScore;
 
-    @Lob
-    @Column(nullable = false, columnDefinition = "NVARCHAR(MAX)")
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String feedback;
 
-    @Lob
-    @Column(name = "strengths_json", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "strengths_json", columnDefinition = "TEXT")
     private String strengthsJson;
 
-    @Lob
-    @Column(name = "weaknesses_json", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "weaknesses_json", columnDefinition = "TEXT")
     private String weaknessesJson;
 
     @CreationTimestamp

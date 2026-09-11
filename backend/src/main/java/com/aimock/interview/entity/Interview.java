@@ -64,8 +64,7 @@ public class Interview {
     @Column(name = "overall_score", precision = 5, scale = 2)
     private BigDecimal overallScore;
 
-    @Lob
-    @Column(name = "resume_extracted_text", columnDefinition = "NVARCHAR(MAX)")
+    @Column(name = "resume_extracted_text", columnDefinition = "TEXT")
     private String resumeExtractedText;
 
     @Column(name = "start_time")
